@@ -1,5 +1,5 @@
 abstract class Program {
-  Future<bool> checkInstallation();
+  Future<bool> isProgramInstalled();
   Future<void> install();
   Future<void> update();
 }
