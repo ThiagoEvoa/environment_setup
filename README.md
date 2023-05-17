@@ -22,6 +22,6 @@ On terminal run this command.
 ./bin/Flutter\ Setup.exe
 ```
 
-## Acknowledgements
+## References
 
  - [Dart Compile](https://dart.dev/tools/dart-compile)
