@@ -7,18 +7,17 @@ A terminal application to install Flutter and all dependencies.
 
 - Install Android Studio
 - Set Java environment variable
-- Install Xcode
-- Install Homebrew
-- Install Git
-- Install Cocoapods
-- Install Flutter
+- Install Xcode (partially automated)
+- Install and update Homebrew
+- Install and update Git
+- Install and update Cocoapods
+- Install and update Flutter
 - Set Flutter environment variable
-- Update Homebrew and formulae list
 
 
 ## Usage/Examples
-On terminal run this command at the root of the file folder.
+On terminal run this command.
 
 ```bash
-./flutter_exe
+./bin/Flutter\ Setup.exe
 ```
