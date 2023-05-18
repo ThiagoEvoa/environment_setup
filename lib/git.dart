@@ -1,8 +1,3 @@
-import 'dart:io';
-
-import 'package:environment_setup/program.dart';
-import 'package:process_run/process_run.dart';
-
 import 'util.dart';
 
 class Git implements Program {

@@ -9,6 +9,13 @@ import 'git.dart';
 import 'homebrew.dart';
 import 'xcode.dart';
 
+export 'dart:io';
+
+export 'package:http/http.dart';
+export 'package:process_run/process_run.dart';
+
+export 'program.dart';
+
 Future<void> install(Shell shell) async {
   try {
     await Android(shell).install();
