@@ -1,7 +1,7 @@
 name: environment_setup
-description: A sample command-line application.
+description: A command-line application for setting up flutter environment.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/ThiagoEvoa/environment_setup
 
 environment:
   sdk: ^3.0.0
