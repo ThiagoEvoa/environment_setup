@@ -9,10 +9,26 @@ class Android implements Program {
   late String fileName;
   late File androidStudioFile;
 
+  Future<String> _getAndroidStudioUrl() async {
+    if (Platform.isMacOS) {
+      List<ProcessResult> results = await _shell.run('uname -m');
+      if (results[0].outText == 'arm64') {
+        return 'https://redirector.gvt1.com/edgedl/android/studio/install/2022.2.1.19/android-studio-2022.2.1.19-mac_arm.dmg';
+      } else {
+        return 'https://redirector.gvt1.com/edgedl/android/studio/install/2022.2.1.19/android-studio-2022.2.1.19-mac.dmg';
+      }
+    } else if (Platform.isLinux) {
+      throw UnimplementedError('Linux not implemented yet.');
+      // return 'https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.2.1.19/android-studio-2022.2.1.19-linux.tar.gz';
+    } else {
+      throw UnimplementedError('Windows not implemented yet.');
+      // return 'https://redirector.gvt1.com/edgedl/android/studio/install/2022.2.1.19/android-studio-2022.2.1.19-windows.exe';
+    }
+  }
+
   Future<void> _downloadAndroidStudio() async {
     stdout.writeln('Downloading Android Studio.');
-    final url =
-        'https://redirector.gvt1.com/edgedl/android/studio/install/2022.2.1.19/android-studio-2022.2.1.19-mac_arm.dmg';
+    final url = await _getAndroidStudioUrl();
     fileName = url.substring(url.lastIndexOf('/') + 1);
     androidStudioFile = File(
       '/Users/thiagoevoa/Downloads/$fileName',
