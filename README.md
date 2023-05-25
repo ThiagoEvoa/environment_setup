@@ -22,6 +22,8 @@ On terminal run this command.
 ./bin/Flutter\ Setup.exe
 ```
 
+Obs: This exe application is not only compatible with Windows, it can also be run on Linux and MacOs.
+
 ## References
 
  - [Dart Compile](https://dart.dev/tools/dart-compile)
